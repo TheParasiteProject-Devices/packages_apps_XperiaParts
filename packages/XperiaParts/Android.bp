@@ -1,3 +1,7 @@
+soong_namespace {
+    imports: ["hardware/sony"],
+}
+
 android_app {
     name: "XperiaParts",
     defaults: ["SettingsLibDefaults"],
