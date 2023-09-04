@@ -1,8 +1,8 @@
 PRODUCT_SOONG_NAMESPACES += \
     packages/apps/XperiaParts/packages
 
-# Inherit from DeviceSettings config
-$(call inherit-product, packages/apps/XperiaParts/configs/devicesettings.mk)
+# Inherit from XperiaParts config
+$(call inherit-product, packages/apps/XperiaParts/configs/XperiaParts.mk)
 
 # Sepolicy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += packages/apps/XperiaParts/sepolicy/private
