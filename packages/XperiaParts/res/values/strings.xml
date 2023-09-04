@@ -12,7 +12,7 @@
     <!-- Sound Settings -->
     <string name="sound_title">Sound</string>
     <string name="audio_setting_header">Audio Settings</string>
-    <string name="audio_setting_summary">Elevate your sound quality with the Dolby Sound EQ for a remarkable and immersive audio playback experience</string>
+    <string name="audio_setting_summary">Elevate your sound quality with the Dolby Atmos EQ for a remarkable and immersive audio playback experience</string>
 
     <!-- Charging Settings -->
     <string name="charging_title">Charging</string>
@@ -30,8 +30,8 @@
     <!-- Audio Settings -->
     <string name="audio_menu_title">@string/audio_setting_header</string>
     <string name="audio_menu_header">Sound Quality</string>
-    <string name="dolby_setting_header">Dolby Sound</string>
-    <string name="dolby_setting_summary">Adjust Dolby Sound settings to experience immersive, multidimensional sound that envelops you, bringing movies, music, and games to life</string>
+    <string name="dolby_setting_header">Dolby Atmos</string>
+    <string name="dolby_setting_summary">Adjust Dolby Atmos settings to experience immersive, multidimensional sound that envelops you, bringing movies, music, and games to life</string>
 
     <!-- Battery Care -->
     <string name="advanced_charger_title">@string/charger_setting_header</string>
