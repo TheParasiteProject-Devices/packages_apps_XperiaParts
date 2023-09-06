@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
- package com.xperia.parts.sound
+ package org.lineageos.settings.device.sound
 
  import android.os.Bundle
  import androidx.preference.Preference
  import androidx.preference.PreferenceFragmentCompat
- import com.xperia.parts.R
+ import org.lineageos.settings.device.R
  
  class AudioSettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener {
  

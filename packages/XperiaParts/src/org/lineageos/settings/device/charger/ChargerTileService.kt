@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.xperia.parts.charger
+package org.lineageos.settings.device.charger
 
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService

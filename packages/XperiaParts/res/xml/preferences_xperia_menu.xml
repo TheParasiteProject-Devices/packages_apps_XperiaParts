@@ -20,8 +20,8 @@
             android:summary="@string/display_setting_summary">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetPackage="com.xperia.parts"
-                android:targetClass="com.xperia.parts.display.DisplaySettingsActivity" />
+                android:targetPackage="org.lineageos.settings.device"
+                android:targetClass="org.lineageos.settings.device.display.DisplaySettingsActivity" />
         </Preference>
 
     </PreferenceCategory>
@@ -37,8 +37,8 @@
             android:summary="@string/audio_setting_summary">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetPackage="com.xperia.parts"
-                android:targetClass="com.xperia.parts.sound.AudioSettingsActivity" />
+                android:targetPackage="org.lineageos.settings.device"
+                android:targetClass="org.lineageos.settings.device.sound.AudioSettingsActivity" />
         </Preference>
 
     </PreferenceCategory>
@@ -52,11 +52,11 @@
             android:icon="@drawable/ic_battery_care"
             android:title="@string/charger_setting_header"
             android:summary="@string/charger_setting_summary"
-            android:fragment="com.xperia.parts.charger.ChargerSettingsActivity">
+            android:fragment="org.lineageos.settings.device.charger.ChargerSettingsActivity">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetPackage="com.xperia.parts"
-                android:targetClass="com.xperia.parts.charger.ChargerSettingsActivity" />
+                android:targetPackage="org.lineageos.settings.device"
+                android:targetClass="org.lineageos.settings.device.charger.ChargerSettingsActivity" />
         </Preference>
 
     </PreferenceCategory>

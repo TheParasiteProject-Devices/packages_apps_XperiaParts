@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xperia.parts.display
+package org.lineageos.settings.device.display
 
 import android.app.Activity
 import android.content.Context

@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xperia.parts
+package org.lineageos.settings.device
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.xperia.parts.display.CreatorModeUtils
-import com.xperia.parts.charger.ChargerUtils
+import org.lineageos.settings.device.display.CreatorModeUtils
+import org.lineageos.settings.device.charger.ChargerUtils
 
 class BootCompletedReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {

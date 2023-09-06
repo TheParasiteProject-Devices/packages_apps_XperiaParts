@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xperia.parts
+package org.lineageos.settings.device
 
 import android.os.Bundle
 import androidx.preference.*
 
-import com.xperia.parts.R
+import org.lineageos.settings.device.R
 
 class XperiaSettingsFragment : PreferenceFragment() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {

@@ -4,7 +4,7 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
-package com.xperia.parts.widgets
+package org.lineageos.settings.device.widgets
 
 import android.content.Context
 import android.graphics.PorterDuff
@@ -19,7 +19,7 @@ import android.widget.Toast
 import androidx.core.content.res.TypedArrayUtils
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
-import com.xperia.parts.R
+import org.lineageos.settings.device.R
 
 class CustomSeekBarPreference @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = TypedArrayUtils.getAttr(

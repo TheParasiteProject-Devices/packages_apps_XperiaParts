@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xperia.parts.charger
+package org.lineageos.settings.device.charger
 
 import android.util.Log
 
@@ -19,9 +19,9 @@ import com.android.settingslib.widget.OnMainSwitchChangeListener
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import java.util.*
- 
-import com.xperia.parts.R
-import com.xperia.parts.widgets.CustomSeekBarPreference
+
+import org.lineageos.settings.device.R
+import org.lineageos.settings.device.widgets.CustomSeekBarPreference
 
 const val CHARGER_SETTING_ENABLE_KEY = "charger_setting_main_enable"
 const val CHARGER_CHARGING_ENABLE_KEY = "device_charging_enable"

@@ -22,7 +22,7 @@
         android:persistent="false"
         android:dependency="charger_setting_main_enable" />
 
-    <com.xperia.parts.widgets.CustomSeekBarPreference
+    <org.lineageos.settings.device.widgets.CustomSeekBarPreference
         android:key="device_charging_control"
         android:title="@string/device_charging_control_title"
         android:defaultValue="@integer/charging_control_default"

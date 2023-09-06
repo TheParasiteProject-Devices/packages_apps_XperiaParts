@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.xperia.parts.switcher
+package org.lineageos.settings.device.switcher
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -25,7 +25,7 @@ import android.view.Display
 import java.util.ArrayList
 import java.util.Locale
 
-import com.xperia.parts.R
+import org.lineageos.settings.device.R
 
 class RefreshRateTileService : TileService() {
     private val KEY_MIN_REFRESH_RATE = "min_refresh_rate"

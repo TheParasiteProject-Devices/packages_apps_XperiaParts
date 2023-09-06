@@ -3,13 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xperia.parts.charger
+package org.lineageos.settings.device.charger
 
 import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
-import com.xperia.parts.R
+import org.lineageos.settings.device.R
 
 class ChargerSettingsActivity : CollapsingToolbarBaseActivity() {
 

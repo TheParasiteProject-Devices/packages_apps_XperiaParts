@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xperia.parts
+package org.lineageos.settings.device
 
 import android.os.Bundle
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.xperia.parts.display
+package org.lineageos.settings.device.display
 
 import android.os.Bundle
 import android.util.ArraySet
@@ -22,7 +22,7 @@ import com.android.settingslib.widget.LayoutPreference
 import java.util.*
 import kotlin.collections.ArrayList
 
-import com.xperia.parts.R
+import org.lineageos.settings.device.R
 
 const val CREATOR_MODE_KEY = "switchCreatorMode"
 

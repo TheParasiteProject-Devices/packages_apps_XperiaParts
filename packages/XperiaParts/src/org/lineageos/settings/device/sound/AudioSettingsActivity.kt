@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
- package com.xperia.parts.sound
+ package org.lineageos.settings.device.sound
 
  import android.os.Bundle
  import androidx.fragment.app.FragmentManager
  import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
- import com.xperia.parts.R
+ import org.lineageos.settings.device.R
  
  class AudioSettingsActivity : CollapsingToolbarBaseActivity() {
      override fun onCreate(savedInstanceState: Bundle?) {
