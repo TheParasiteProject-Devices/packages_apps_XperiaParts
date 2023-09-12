@@ -29,11 +29,11 @@ const val CREATOR_MODE_KEY = "switchCreatorMode"
 class DisplaySettingsFragment : PreferenceFragment(), Preference.OnPreferenceChangeListener {
     private lateinit var creatorModeUtils: CreatorModeUtils
 
-companion object {
-    private const val DOT_INDICATOR_SIZE = 12
-    private const val DOT_INDICATOR_LEFT_PADDING = 6
-    private const val DOT_INDICATOR_RIGHT_PADDING = 6
-}
+    companion object {
+        private const val DOT_INDICATOR_SIZE = 12
+        private const val DOT_INDICATOR_LEFT_PADDING = 6
+        private const val DOT_INDICATOR_RIGHT_PADDING = 6
+    }
 
     private val KEY_COLOR_MODE_PREVIEW = "color_mode_preview"
     private val PAGE_VIEWER_SELECTION_INDEX = "page_viewer_selection_index"
@@ -59,7 +59,7 @@ companion object {
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        when(preference.key) {
+        when (preference.key) {
             CREATOR_MODE_KEY -> creatorModeUtils.setMode(newValue as Boolean)
         }
 
@@ -73,9 +73,9 @@ companion object {
 
     fun getViewPagerResource(): ArrayList<Int> {
         return arrayListOf(
-            R.layout.color_mode_view1,
-            R.layout.color_mode_view2,
-            R.layout.color_mode_view3)
+                R.layout.color_mode_view1,
+                R.layout.color_mode_view2,
+                R.layout.color_mode_view3)
     }
 
     fun addViewPager() {
@@ -133,7 +133,7 @@ companion object {
                     }
                 } else {
                     mViewPagerImages!![position]!!.contentDescription =
-                    getContext().getString(R.string.colors_viewpager_content_description)
+                            getContext().getString(R.string.colors_viewpager_content_description)
                     updateIndicator(position)
                 }
             }

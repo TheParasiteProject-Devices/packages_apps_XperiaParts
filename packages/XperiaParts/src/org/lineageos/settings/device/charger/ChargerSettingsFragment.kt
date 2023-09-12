@@ -31,7 +31,7 @@ const val CHARGER_CHARGING_LIMIT_KEY = "device_charging_control"
 const val CHARGER_CHARGING_LIMIT_BACKUP = "device_charging_control_backup"
 
 class ChargerSettingsFragment : PreferenceFragmentCompat(),
-    Preference.OnPreferenceChangeListener, OnMainSwitchChangeListener {
+        Preference.OnPreferenceChangeListener, OnMainSwitchChangeListener {
 
     private lateinit var chargerUtils: ChargerUtils
 
@@ -78,7 +78,7 @@ class ChargerSettingsFragment : PreferenceFragmentCompat(),
     override fun onSwitchChanged(switchView: Switch, isChecked: Boolean) {
         mSwitch!!.setChecked(isChecked)
 
-        val sharedPreferences: SharedPreferences = 
+        val sharedPreferences: SharedPreferences =
                 PreferenceManager.getDefaultSharedPreferences(requireContext());
 
         if (!sharedPreferences.getBoolean(CHARGER_SETTING_ENABLE_KEY, true)) {

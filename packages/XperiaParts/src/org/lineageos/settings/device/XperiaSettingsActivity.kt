@@ -20,5 +20,5 @@ class XperiaSettingsActivity : CollapsingToolbarBaseActivity() {
 
     companion object {
         private const val TAG = "XperiaSettingsActivity"
-    }   
+    }
 }

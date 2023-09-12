@@ -22,11 +22,11 @@ import androidx.preference.PreferenceViewHolder
 import org.lineageos.settings.device.R
 
 class CustomSeekBarPreference @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = TypedArrayUtils.getAttr(
-        context,
-        R.attr.preferenceStyle,
-        android.R.attr.preferenceStyle
-    ), defStyleRes: Int = 0
+        context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = TypedArrayUtils.getAttr(
+                context,
+                R.attr.preferenceStyle,
+                android.R.attr.preferenceStyle
+        ), defStyleRes: Int = 0
 ) : Preference(context, attrs, defStyleAttr, defStyleRes), SeekBar.OnSeekBarChangeListener {
 
     // Values
@@ -55,7 +55,7 @@ class CustomSeekBarPreference @JvmOverloads constructor(
 
     init {
         val styledAttrs =
-            context.obtainStyledAttributes(attrs, R.styleable.CustomSeekBarPreference)
+                context.obtainStyledAttributes(attrs, R.styleable.CustomSeekBarPreference)
 
         // Whether the "+" sign should be shown
         mShowSign = styledAttrs.getBoolean(R.styleable.CustomSeekBarPreference_showSign, mShowSign)
@@ -66,13 +66,13 @@ class CustomSeekBarPreference @JvmOverloads constructor(
 
         // Check if we should report values continuously
         mContinuousUpdates = styledAttrs.getBoolean(
-            R.styleable.CustomSeekBarPreference_continuousUpdates,
-            mContinuousUpdates
+                R.styleable.CustomSeekBarPreference_continuousUpdates,
+                mContinuousUpdates
         )
 
         // Special texts when the value is default
         val defaultValueText =
-            styledAttrs.getString(R.styleable.CustomSeekBarPreference_defaultValueText)
+                styledAttrs.getString(R.styleable.CustomSeekBarPreference_defaultValueText)
         mDefaultValueTextExists = !defaultValueText.isNullOrEmpty()
         if (mDefaultValueTextExists) {
             mDefaultValueText = defaultValueText
@@ -123,8 +123,8 @@ class CustomSeekBarPreference @JvmOverloads constructor(
                 // remove the existing seekbar (there may not be one) and add ours
                 newContainer.removeAllViews()
                 newContainer.addView(
-                    mSeekBar, ViewGroup.LayoutParams.FILL_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
+                        mSeekBar, ViewGroup.LayoutParams.FILL_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
                 )
             }
         } catch (ex: Exception) {
@@ -141,12 +141,12 @@ class CustomSeekBarPreference @JvmOverloads constructor(
         mSeekBar.setOnSeekBarChangeListener(this)
         mResetImageView!!.setOnClickListener {
             Toast.makeText(
-                context,
-                context.getString(
-                    R.string.custom_seekbar_default_value_to_set,
-                    getTextValue(mDefaultValue)
-                ),
-                Toast.LENGTH_LONG
+                    context,
+                    context.getString(
+                            R.string.custom_seekbar_default_value_to_set,
+                            getTextValue(mDefaultValue)
+                    ),
+                    Toast.LENGTH_LONG
             ).show()
         }
         mResetImageView!!.onLongClickListener = View.OnLongClickListener {
@@ -156,22 +156,22 @@ class CustomSeekBarPreference @JvmOverloads constructor(
         mMinusImageView!!.setOnClickListener { setValue(mValue - mInterval, true) }
         mMinusImageView!!.onLongClickListener = View.OnLongClickListener {
             setValue(
-                if (mMaxValue - mMinValue > mInterval * 2 && mMaxValue + mMinValue < mValue * 2)
-                    Math.floorDiv(
-                        mMaxValue + mMinValue,
-                        2
-                    ) else mMinValue, true
+                    if (mMaxValue - mMinValue > mInterval * 2 && mMaxValue + mMinValue < mValue * 2)
+                        Math.floorDiv(
+                                mMaxValue + mMinValue,
+                                2
+                        ) else mMinValue, true
             )
             true
         }
         mPlusImageView!!.setOnClickListener { setValue(mValue + mInterval, true) }
         mPlusImageView!!.onLongClickListener = View.OnLongClickListener {
             setValue(
-                if (mMaxValue - mMinValue > mInterval * 2 && mMaxValue + mMinValue > mValue * 2) -1
-                        * Math.floorDiv(
-                    -1 * (mMaxValue + mMinValue),
-                    2
-                ) else mMaxValue, true
+                    if (mMaxValue - mMinValue > mInterval * 2 && mMaxValue + mMinValue > mValue * 2) -1
+                            * Math.floorDiv(
+                            -1 * (mMaxValue + mMinValue),
+                            2
+                    ) else mMaxValue, true
             )
             true
         }
@@ -198,29 +198,29 @@ class CustomSeekBarPreference @JvmOverloads constructor(
                         context.getString(R.string.custom_seekbar_default_value) + ")")
             } else {
                 mValueTextView?.text =
-                    context.getString(R.string.custom_seekbar_value, getTextValue(mValue)) +
-                            if (mDefaultValueExists && mValue == mDefaultValue) " (" +
-                                    context.getString(R.string.custom_seekbar_default_value) + ")"
-                            else ""
+                        context.getString(R.string.custom_seekbar_value, getTextValue(mValue)) +
+                                if (mDefaultValueExists && mValue == mDefaultValue) " (" +
+                                        context.getString(R.string.custom_seekbar_default_value) + ")"
+                                else ""
             }
         } else {
             if (mDefaultValueTextExists && mDefaultValueExists && (mTrackingValue == mDefaultValue)) {
                 mValueTextView?.text = "[$mDefaultValueText]"
             } else {
                 mValueTextView?.text = context.getString(
-                    R.string.custom_seekbar_value,
-                    "[" + getTextValue(mTrackingValue) + "]"
+                        R.string.custom_seekbar_value,
+                        "[" + getTextValue(mTrackingValue) + "]"
                 )
             }
         }
         if (!mDefaultValueExists || (mValue == mDefaultValue) || mTrackingTouch)
             mResetImageView?.visibility =
-                View.INVISIBLE else mResetImageView?.visibility = View.VISIBLE
+                    View.INVISIBLE else mResetImageView?.visibility = View.VISIBLE
         if (mValue == mMinValue || mTrackingTouch) {
             mMinusImageView?.isClickable = false
             mMinusImageView?.setColorFilter(
-                context.getColor(R.color.disabled_text_color),
-                PorterDuff.Mode.MULTIPLY
+                    context.getColor(R.color.disabled_text_color),
+                    PorterDuff.Mode.MULTIPLY
             )
         } else {
             mMinusImageView?.isClickable = true
@@ -229,8 +229,8 @@ class CustomSeekBarPreference @JvmOverloads constructor(
         if (mValue == mMaxValue || mTrackingTouch) {
             mPlusImageView?.isClickable = false
             mPlusImageView?.setColorFilter(
-                context.getColor(R.color.disabled_text_color),
-                PorterDuff.Mode.MULTIPLY
+                    context.getColor(R.color.disabled_text_color),
+                    PorterDuff.Mode.MULTIPLY
             )
         } else {
             mPlusImageView?.isClickable = true

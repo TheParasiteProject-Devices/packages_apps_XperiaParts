@@ -19,8 +19,8 @@ class ChargerSettingsActivity : CollapsingToolbarBaseActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.content_frame, ChargerSettingsFragment())
-                .commit()
+                    .replace(R.id.content_frame, ChargerSettingsFragment())
+                    .commit()
         }
     }
 

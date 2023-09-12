@@ -13,9 +13,9 @@ import vendor.sony.charger.ICharger
 
 class ChargerUtils(private val context: Context) {
     private val sonyChargerService: ICharger =
-        ICharger.Stub.asInterface(
-            ServiceManager.getService("vendor.sony.charger.ICharger/default")
-        )
+            ICharger.Stub.asInterface(
+                    ServiceManager.getService("vendor.sony.charger.ICharger/default")
+            )
 
     var chargingLimit: Int
         get() {
@@ -31,9 +31,9 @@ class ChargerUtils(private val context: Context) {
         set(value) {
             sonyChargerService.setChargingEnable(value)
             Settings.Secure.putInt(
-                context.contentResolver,
-                CHARGER_CHARGING_ENABLE,
-                if (value) 1 else 0
+                    context.contentResolver,
+                    CHARGER_CHARGING_ENABLE,
+                    if (value) 1 else 0
             )
         }
 
@@ -43,9 +43,9 @@ class ChargerUtils(private val context: Context) {
         }
         set(value) {
             Settings.Secure.putInt(
-                context.contentResolver,
-                CHARGER_MAIN_ENABLE,
-                if (value) 1 else 0
+                    context.contentResolver,
+                    CHARGER_MAIN_ENABLE,
+                    if (value) 1 else 0
             )
         }
 
@@ -55,14 +55,14 @@ class ChargerUtils(private val context: Context) {
 
     fun applyOnBoot() {
         val mainSwitch: Boolean =
-        Settings.Secure.getInt(context.contentResolver, CHARGER_MAIN_ENABLE, 0) > 0
-        
+                Settings.Secure.getInt(context.contentResolver, CHARGER_MAIN_ENABLE, 0) > 0
+
         if (mainSwitch) {
-        val chargingEnabled: Int =
-            Settings.Secure.getInt(context.contentResolver, CHARGER_CHARGING_ENABLE, 0)
-        val chargingLimit: Int =
-            Settings.Secure.getInt(context.contentResolver, CHARGER_LIMIT_ENABLE, 100)
-        
+            val chargingEnabled: Int =
+                    Settings.Secure.getInt(context.contentResolver, CHARGER_CHARGING_ENABLE, 0)
+            val chargingLimit: Int =
+                    Settings.Secure.getInt(context.contentResolver, CHARGER_LIMIT_ENABLE, 100)
+
             Log.i(TAG, "Charger: $chargingEnabled")
             this.isChargingEnabled = chargingEnabled > 0
             this.chargingLimit = chargingLimit
