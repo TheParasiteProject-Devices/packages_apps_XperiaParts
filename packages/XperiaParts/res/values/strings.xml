@@ -14,11 +14,6 @@
     <string name="audio_setting_header">Audio Settings</string>
     <string name="audio_setting_summary">Elevate your sound quality with the Dolby Atmos EQ for a remarkable and immersive audio playback experience</string>
 
-    <!-- Charging Settings -->
-    <string name="charging_title">Charging</string>
-    <string name="charger_setting_header">Battery Care</string>
-    <string name="charger_setting_summary">Optimize battery longevity by adjusting the maximum charging percentage and fine-tuning other charging settings</string>
-
     <!-- Creator Mode -->
     <string name="cm_display_header">Color Gamut and Contrast</string>
     <string name="cm_switch_title">Creator Mode</string>
@@ -32,14 +27,6 @@
     <string name="audio_menu_header">Sound Quality</string>
     <string name="dolby_setting_header">Dolby Atmos</string>
     <string name="dolby_setting_summary">Adjust Dolby Atmos settings to experience immersive, multidimensional sound that envelops you, bringing movies, music, and games to life</string>
-
-    <!-- Battery Care -->
-    <string name="advanced_charger_title">@string/charger_setting_header</string>
-    <string name="charger_setting_main_enable_title">Use Battery Care</string>
-    <string name="device_charging_enable_title">Enable Charging</string>
-    <string name="device_charging_enable_summary">Disabling this setting will stop the device from charging</string>
-    <string name="device_charging_control_title">Charging Limit</string>
-    <string name="charger_setting_explained">If Battery Care is enabled, the device will start charging only when the following requirements have been met:\n 1. You have enabled charging by toggling \"Enable Charging\".\n 2. Your device\'s battery level is lower than the charging limit you\'ve set.\n\n\nCharging stops when a specified percentage is reached to increase the lifespan of the battery.\nSetting that limit to 80% yields even better results.</string>
 
     <!-- USB Section | External Monitor -->
     <string name="usb_title">USB</string>
@@ -69,9 +56,6 @@
 
     <!-- Battery Care Image Size -->
     <dimen name="battery_care_preview_height">405dp</dimen>
-
-    <!-- H.S (Heat Suppression) Power Control QS Tile -->
-    <string name="charger_qs_tile_title">Pause Charging</string>
 
     <!-- Refresh Rate QS Tile -->
     <string name="refresh_rate_tile_title">Refresh Rate</string>

@@ -44,24 +44,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="charging"
-        android:title="@string/charging_title">
-
-        <Preference
-            android:key="advanced_charger_settings"
-            android:icon="@drawable/ic_battery_care"
-            android:title="@string/charger_setting_header"
-            android:summary="@string/charger_setting_summary"
-            android:fragment="org.lineageos.settings.device.charger.ChargerSettingsActivity">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="org.lineageos.settings.device"
-                android:targetClass="org.lineageos.settings.device.charger.ChargerSettingsActivity" />
-        </Preference>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="usb"
         android:title="@string/usb_title">
 
